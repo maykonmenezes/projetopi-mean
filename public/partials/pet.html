@@ -1,0 +1,81 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#/">MeowPet</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#/">Cadastrar pet</a></li>
+        <li><a href="#/">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="pet container-fluid">
+  <div class="row">
+    <div class="col-sm-2">
+      <h3>Novo Pet</h3>
+      <h4 ng-show="mensagem.texto">
+              {{mensagem.texto}}</h4>
+    </div>
+    <!-- Container (Pricing Section) -->
+<div id="pricing" class="col-sm-8">
+  <div class="text-center">
+    <h2>Cadastro</h2>
+  </div>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Precisamos que você nos informe alguns dados sobre o seu pet</p>
+    </div>
+    <div class="col-sm-7">
+      <div class="row">
+      <form ng-submit="salva()" novalidate>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Nome" type="text" ng-model="pet.nome" required>
+        </div>
+        <div class="col-sm-6 form-group">
+			   <input type="file" placeholder="incluir">
+        </div>
+        <div class="col-sm-6 form-group">
+				<textarea name="descricao" placeholder="Descrição" class="form-control" rows="5" 
+				required ng-model="pet.descricao">	
+				</textarea>
+        </div>
+        <div class="col-sm-6 form-group">
+				<select class="form-control" required ng-model="pet.categoria">
+					<option value="Gato">Gato</option>
+					<option value="Cachorro">Cachorro</option>
+					<option value="Passaro">Passaro</option>
+					<option value="Outro Pet">Outro Pet</option>
+				</select>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="email@gmail.com" type="email" required ng-model="pet.email">
+        </div>
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-lg pull-right" type="submit">Salvar</button>
+          <a href="#/" class="btn btn-lg pull-right">Voltar</a>
+        </div>
+       </form>
+      </div>
+      </div> 
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+
+
+<footer class="container-fluid text-center">
+  <a href="#" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>MeowPets <a href="#" title=""></a></p>		
+</footer>

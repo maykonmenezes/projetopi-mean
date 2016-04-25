@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="appFilereader">
+
+  <head>
+    <script data-require="angular.js@1.2.0" data-semver="1.2.0" src="http://code.angularjs.org/1.2.0/angular.js"></script>
+    <script src="filereader.js"></script>
+  </head>
+
+  <body>
+
+  <form novalidate>
+    Pick an image-file: <input type="file" ng-model="dummy.images" accept="image/*" multiple app-filereader /><br />
+    <img ng-repeat="image in dummy.images" ng-src="{{image}}" width="300" /><br />
+    <button ng-click="dummy.images = null" ng-show="!!dummy.images">Remove {{dummy.images.length}} images</button><br />
+  </form>
+  
+  <pre>
+  {{ dummy.images }}
+  </pre>
+</body>
+
+</html>
